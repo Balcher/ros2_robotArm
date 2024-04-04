@@ -14,7 +14,7 @@
   <xacro:ur5_transmissions />
 
   <!-- include ur5 ros2_control description -->
-  <xacro:include filename="$(find ur5_description)/urdf/ur5.ros2_control.xacro" />
+  <xacro:include filename="$(find ur5_description)/urdf/ur5_ros2_control.xacro" />
   <xacro:ur5_ros2_control />
 
 </robot>

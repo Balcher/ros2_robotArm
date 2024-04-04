@@ -3,7 +3,7 @@
 
   <xacro:macro name="ur5_joints_links">
 
-    <!-- links: main serial chain -->
+    <!-- links main serial chain -->
 
     <link name="world" />
 
@@ -11,7 +11,7 @@
       <visual>
         <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/visual/base.dae" />
+          <mesh filename="package://ur5_description/meshes/base.dae" />
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0" />
@@ -20,7 +20,7 @@
       <collision>
         <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/collision/base.stl" />
+          <mesh filename="package://ur5_description/meshes/base.dae" />
         </geometry>
       </collision>
       <inertial>
@@ -34,7 +34,7 @@
       <visual>
         <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/visual/shoulder.dae" />
+          <mesh filename="package://ur5_description/meshes/shoulder.dae" />
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0" />
@@ -43,7 +43,7 @@
       <collision>
         <origin rpy="0 0 3.141592653589793" xyz="0 0 0" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/collision/shoulder.stl" />
+          <mesh filename="package://ur5_description/meshes/shoulder.dae" />
         </geometry>
       </collision>
       <inertial>
@@ -58,7 +58,7 @@
       <visual>
         <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.138" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/visual/upperarm.dae" />
+          <mesh filename="package://ur5_description/meshes/upperarm.dae" />
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0" />
@@ -67,7 +67,7 @@
       <collision>
         <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.138" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/collision/upperarm.stl" />
+          <mesh filename="package://ur5_description/meshes/upperarm.dae" />
         </geometry>
       </collision>
       <inertial>
@@ -82,7 +82,7 @@
       <visual>
         <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.007" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/visual/forearm.dae" />
+          <mesh filename="package://ur5_description/meshes/forearm.dae" />
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0" />
@@ -91,7 +91,7 @@
       <collision>
         <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.007" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/collision/forearm.stl" />
+          <mesh filename="package://ur5_description/meshes/forearm.dae" />
         </geometry>
       </collision>
       <inertial>
@@ -106,7 +106,7 @@
       <visual>
         <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.127" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/visual/wrist1.dae" />
+          <mesh filename="package://ur5_description/meshes/wrist1.dae" />
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0" />
@@ -115,7 +115,7 @@
       <collision>
         <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.127" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/collision/wrist1.stl" />
+          <mesh filename="package://ur5_description/meshes/wrist1.dae" />
         </geometry>
       </collision>
       <inertial>
@@ -130,7 +130,7 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 -0.0997" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/visual/wrist2.dae" />
+          <mesh filename="package://ur5_description/meshes/wrist2.dae" />
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0" />
@@ -139,7 +139,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0 0 -0.0997" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/collision/wrist2.stl" />
+          <mesh filename="package://ur5_description/meshes/wrist2.dae" />
         </geometry>
       </collision>
       <inertial>
@@ -154,7 +154,7 @@
       <visual>
         <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0989" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/visual/wrist3.dae" />
+          <mesh filename="package://ur5_description/meshes/wrist3.dae" />
         </geometry>
         <material name="LightGrey">
           <color rgba="0.7 0.7 0.7 1.0" />
@@ -163,7 +163,7 @@
       <collision>
         <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0989" />
         <geometry>
-          <mesh filename="package://ur5_description/meshes/collision/wrist3.stl" />
+          <mesh filename="package://ur5_description/meshes/wrist3.dae" />
         </geometry>
       </collision>
       <inertial>
@@ -174,7 +174,7 @@
       </inertial>
     </link>
 
-    <!-- joints: main serial chain -->
+    <!-- joints main serial chain -->
 
     <joint name="base_fixed_joint" type="fixed">
       <parent link="world"/>
@@ -182,7 +182,7 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </joint>
 
-    <joint name="joint1" type="revolute">
+    <joint name="joint_1" type="revolute">
       <parent link="base_link" />
       <child link="shoulder_link" />
       <origin rpy="0 0 0" xyz="0 0 0.1625" />
@@ -191,7 +191,7 @@
         velocity="3.141592653589793" />
     </joint>
 
-    <joint name="joint2" type="revolute">
+    <joint name="joint_2" type="revolute">
       <parent link="shoulder_link" />
       <child link="upper_arm_link" />
       <origin rpy="1.5707 1.5707 0" xyz="0 0 0" />
@@ -200,7 +200,7 @@
         velocity="3.141592653589793" />
     </joint>
 
-    <joint name="joint3" type="revolute">
+    <joint name="joint_3" type="revolute">
       <parent link="upper_arm_link" />
       <child link="forearm_link" />
       <origin rpy="0 0 0" xyz="-0.425 0 0" />
@@ -209,7 +209,7 @@
         velocity="3.141592653589793" />
     </joint>
 
-    <joint name="joint4" type="revolute">
+    <joint name="joint_4" type="revolute">
       <parent link="forearm_link" />
       <child link="wrist_1_link" />
       <origin rpy="0 0 -1.5707" xyz="-0.3922 0 0.1333" />
@@ -218,7 +218,7 @@
         velocity="3.141592653589793" />
     </joint>
 
-    <joint name="joint5" type="revolute">
+    <joint name="joint_5" type="revolute">
       <parent link="wrist_1_link" />
       <child link="wrist_2_link" />
       <origin rpy="1.570796327 0 0" xyz="0 -0.0997 -2.044881182297852e-11" />
@@ -227,7 +227,7 @@
         velocity="3.141592653589793" />
     </joint>
 
-    <joint name="joint6" type="revolute">
+    <joint name="joint_6" type="revolute">
       <parent link="wrist_2_link" />
       <child link="wrist_3_link" />
       <origin rpy="1.570796326589793 3.141592653589793 3.141592653589793"

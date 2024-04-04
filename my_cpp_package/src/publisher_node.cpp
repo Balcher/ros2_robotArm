@@ -3,11 +3,20 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
+#include <rclcpp/init_options.hpp>
+#include <signal.h>
+
 /**
  * @author: Mehmet Kahraman
  * @date: 03.10.2023
  * @about: Publisher node
  **/
+
+void nodesignal_handler(int signum)
+{
+  RCLCPP_WARN(rclcpp::get_logger("publisher_node"), "Caught signal %d. Shutting down...", signum);
+  rclcpp::shutdown();
+}
 
 class MyROSClass : public rclcpp::Node
 {
@@ -52,9 +61,11 @@ class MyROSClass : public rclcpp::Node
 
 int main(int argc, char *argv[])
 {
-  rclcpp::init(argc, argv);
+  rclcpp::init(argc, argv, rclcpp::InitOptions(), rclcpp::SignalHandlerOptions::None);
+  
   RCLCPP_INFO(rclcpp::get_logger("publisher_node"), "Node initialized.");
   auto node = std::make_shared<MyROSClass>();
+  signal(SIGINT, nodesignal_handler);
   node->execute_publisher();
   rclcpp::spin(node);
 
