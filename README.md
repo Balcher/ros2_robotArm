@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: BiChunkai 321521004@qq.com
+ * @Date: 2025-04-14 10:11:31
+ * @FilePath: /ros2_robotArm/README.md
+ * 
+ * Copyright (c) 2025 by 无锡捷普迅科技有限公司, All Rights Reserved. 
+-->
 # ROS2 Examples and Code Templates
 
 ROS2 Humble examples with UR5 robot arm.
@@ -49,6 +57,10 @@ sudo apt install ros-humble-plotjuggler*
 
 Running Launches and Nodes:
 --
+before running launch files, source install/setup.bash
+```
+source install/setup.bash
+```
 
 Display robot on RViz
 ```
